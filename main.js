@@ -16,7 +16,11 @@ import uranusRingTexture from '/src/img/uranus ring.png';
 import neptuneTexture from '/src/img/neptune.jpg';
 import plutoTexture from '/src/img/pluto.jpg';
 
-const renderer = new THREE.WebGLRenderer();
+
+const app = document.querySelector('#app');
+const renderer = new THREE.WebGLRenderer({app});
+
+
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -46,7 +50,8 @@ scene.background = cubeTextureLoader.load([
     starsTexture,
     starsTexture,
     starsTexture,
-    starsTexture
+    starsTexture,
+
 ]);
 
 const textureLoader = new THREE.TextureLoader();
